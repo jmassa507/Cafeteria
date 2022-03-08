@@ -8,7 +8,18 @@ using namespace std;
 using namespace std::this_thread;
 using namespace std::chrono;
 
-/*Tarea grupal: Cafeteria XYZ*/
+/*Tarea grupal: Cafeteria XYZ
+1) El cliente al llegar, oprime un botón en donde se solicita el ingreso al establecimiento y se abra la puerta.
+2) Una vez ingresa, se procede a asignarle el número de mesa (Por orden de llegada).
+3) El cliente procede a seleccionar del menú alguno de los siguientes platos: 
+-Plato del día 
+-Recomendación del Chef
+- Pizza Napolitana.
+4) Aparece un contador con una cuenta regresiva en donde muestra el tiempo de espera para que la orden esté lista y varía de la siguiente forma: 
+- Plato del día: 3 minutos.
+- Recomendación del Chef: 5 minutos
+- Pizza Napolitana: 2 minutos.
+5) Luego de esto debe aparecer un mensaje informándole al cliente que su pedido ha sido entregado.*/
 /*Integrantes: Juan Massa, David Lopez, Israel Castillo, Luis Zhang, Saul Rojas*/
 
 int main(){
