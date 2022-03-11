@@ -24,6 +24,7 @@ using namespace std::chrono;
 
 int main(){
     int hr, min, sec, m=0, m1, fin=0;
+    int eleccion, num1, num2, num3;
 	char puerta;
 
         Inicio:
@@ -42,10 +43,61 @@ int main(){
 			cout<<"\nBoton incorrecto, si desea entrar presione \"a\"";
             goto Inicio;
 		}
+	do{
+    m:
+	printf("******MENU DEL DIA******\n");
+	printf("1.-PLATO DEL DIA\n");
+	printf("2.-RECOMENDACION DEL CHEF\n");
+	printf("3.-PIZZA NAPOLITANA\n");
+    cin>>eleccion;
+	
+    switch(eleccion){
+         case 1: 
+	    printf("El tiempo de espera para este platillo es de 3 minutos desea ordenar este platillo? \nSi->1 \nNo->2\n");
+        cin>>o;
+        if (o==1){
+            hr=00, min=02, sec=60;
+            goto temporizador;
+        }else if (o==2){
+            system("cls");
+            goto m;
+        }
+        break;
+	         
+	    case 2: 
+	    printf("El tiempo de espera para este platillo es de 3 minutos desea ordenar este platillo? \nSi->1 \nNo->2\n");
+        cin>>o;
+        if (o==1){
+            hr=00, min=04, sec=60;
+            goto temporizador;
+        }else if (o==2){
+            system("cls");
+            goto m;
+        } 
+	    break;
+	         
+	    case 3: 
+	    printf("El tiempo de espera para este platillo es de 3 minutos desea ordenar este platillo? \nSi->1 \nNo->2\n");
+        cin>>o;
+        if (o==1){
+            hr=00, min=01, sec=60;
+            goto temporizador;
+        }else if (o==2){
+            system("cls");
+            goto m;
+        }
+	    break;
+
+        default:
+        cout<< "Opcion invalida favor de intentarlo nuevamente"<<endl;
+        goto m;
+        break;
+	    }
             
+   temporizador:
     do{
         system("cls");      
-        cout<< "Mesa numero: "<<m<<"  "<< "su orden estara lista en: "<<endl;
+        cout<< "Mesa numero: "<<m<<" "<< "su orden estara lista en: "<<endl;
         cout<< hr << ":" << min << ":" << sec <<endl;
         sleep_for(seconds(1));
         sec--;
@@ -63,7 +115,23 @@ int main(){
             sec=59;
         }
 
-    }while (fin==0);
+        }while (fin==0);
+
+    }while (x!=0);
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
