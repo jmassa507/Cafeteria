@@ -134,5 +134,9 @@ int main(){
             cout<< "Gracias por su atencion"<<endl;
         }
     
+<<<<<<< HEAD
 	return 0;
 }
+=======
+	return 0;
+>>>>>>> 90975d5db6cf020c7cf0a5a467c7ee4bc580a289
