@@ -24,6 +24,7 @@ using namespace std::chrono;
 
 int main(){
     int hr, min, sec, m=0, m1, fin=0;
+    int eleccion, num1, num2, num3;
 	char puerta;
 
         Inicio:
@@ -45,7 +46,34 @@ int main(){
             
     do{
         system("cls");      
-        cout<< "Mesa numero: "<<m<<"  "<< "su orden estara lista en: "<<endl;
+        cout<< "Mesa numero: "<<m<<" 
+
+        	while(eleccion)
+ 	{
+	  printf("******MENU DEL DIA******\n");
+	  printf("NUM1.-PLATO DEL DIA\n");
+	  printf("NUM2.-RECOMENDACION DEL CHEF\n");
+	  printf("NUM3.-PIZZA NAPOLITANA\n");
+	}
+      	switch(eleccion)
+	    {
+         case 1: 
+	         eleccion= num1;
+	         printf("PLATO DEL DIA\n",eleccion); 
+	         break;
+	         
+	         case 2: 
+	             eleccion= num2;
+	             printf("RECOMENDACION DEL CHEF\n",eleccion); 
+	             break;
+	         
+	             case 3: 
+	                 eleccion= num3;
+	                 printf("PIZZA NAPOLITANA\n",eleccion); 
+	                 break;
+	    }
+        
+         "<< "su orden estara lista en: "<<endl;
         cout<< hr << ":" << min << ":" << sec <<endl;
         sleep_for(seconds(1));
         sec--;
@@ -67,3 +95,18 @@ int main(){
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
