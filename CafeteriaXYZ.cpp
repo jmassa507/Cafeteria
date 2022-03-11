@@ -4,7 +4,6 @@
 #include <chrono>
 
 using namespace std;
-using namespace std;
 using namespace std::this_thread;
 using namespace std::chrono;
 
@@ -23,29 +22,28 @@ using namespace std::chrono;
 /*Integrantes: Juan Massa, David Lopez, Israel Castillo, Luis Zhang, Saul Rojas*/
 
 int main(){
-    int hr, min, sec, m=0, m1, fin=0;
+    int hr, min, sec, m=0, m1=1, fin=0;
 	char puerta;
 
         Inicio:
-		cout<<"\nBienvenido a la Cafetria XYZ.\nPresione \na - para abrir la puerta\n";
+		cout<<"\nBienvenido a la Cafetria XYZ.\nPresione: \na - para abrir la puerta\n";
 		cin>>puerta;
 		system("cls");
 
-		if (puerta==('a'))	{ 
-		    m++;
+		if (puerta==('a')){ 
             m=m+m1;
             if (m>=4){
             cout<< "Lamentamos las molestias pero no nos quedan mesas disponibles"<<endl;
-        
             }
 		}else{
 			cout<<"\nBoton incorrecto, si desea entrar presione \"a\"";
             goto Inicio;
 		}
-            
+            	
+    temporizador:
     do{
         system("cls");      
-        cout<< "Mesa numero: "<<m<<"  "<< "su orden estara lista en: "<<endl;
+        cout<< "Mesa numero: "<<m<<" "<< "su orden estara lista en: "<<endl;
         cout<< hr << ":" << min << ":" << sec <<endl;
         sleep_for(seconds(1));
         sec--;
@@ -63,7 +61,11 @@ int main(){
             sec=59;
         }
 
-    }while (fin==0);
+        }while (fin==0);
 
+    system("cls");
+    cout<< "Mesa numero: "<<m<<"  "<< "su orden esta lista"<<endl;
+    cout<< "00:00:00"<<endl;
+    
 	return 0;
 }
