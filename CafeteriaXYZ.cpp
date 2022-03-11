@@ -22,7 +22,7 @@ using namespace std::chrono;
 /*Integrantes: Juan Massa, David Lopez, Israel Castillo, Luis Zhang, Saul Rojas*/
 
 int main(){
-    int hr, min, sec, m=0, m1=1, fin=0, eleccion, x, o, e;
+    int hr, min, sec, m=0, m1=1, fin=0, eleccion, x, o, p;
 	char puerta;
 
         Inicio:
@@ -118,7 +118,21 @@ int main(){
     cout<< "Mesa numero: "<<m<<"  "<< "su orden esta lista"<<endl;
     cout<< "00:00:00"<<endl;
 
+    //prueba de mesa
+    cout<< "Desea ir con el siguiente cliente \nSi->1 \nNo->2?"<<endl;
+    cin>>p;
+
     }while (x!=0);
+
+    if (p==1){
+            fin=0;
+            system("cls");
+            goto Inicio;
+        }else if(p==2){
+            x==1;
+            a:
+            cout<< "Gracias por su atencion"<<endl;
+        }
     
 	return 0;
 }
