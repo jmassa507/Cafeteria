@@ -4,7 +4,6 @@
 #include <chrono>
 
 using namespace std;
-using namespace std;
 using namespace std::this_thread;
 using namespace std::chrono;
 
@@ -23,20 +22,18 @@ using namespace std::chrono;
 /*Integrantes: Juan Massa, David Lopez, Israel Castillo, Luis Zhang, Saul Rojas*/
 
 int main(){
-    int hr, min, sec, m=0, m1, fin=0;
+    int hr, min, sec, m=0, m1=1, fin=0, eleccion, x, o, p;
 	char puerta;
 
         Inicio:
-		cout<<"\nBienvenido a la Cafetria XYZ.\nPresione \na - para abrir la puerta\n";
+		cout<<"\nBienvenido a la Cafetria XYZ.\nPresione: \na - para abrir la puerta\n";
 		cin>>puerta;
 		system("cls");
 
-		if (puerta==('a'))	{ 
-		    m++;
+		if (puerta==('a')){ 
             m=m+m1;
             if (m>=4){
             cout<< "Lamentamos las molestias pero no nos quedan mesas disponibles"<<endl;
-        
             }
 		}else{
 			cout<<"\nBoton incorrecto, si desea entrar presione \"a\"";
@@ -44,8 +41,60 @@ int main(){
 		}
             
     do{
+    m:
+	printf("******MENU DEL DIA******\n");
+	printf("1.-PLATO DEL DIA\n");
+	printf("2.-RECOMENDACION DEL CHEF\n");
+	printf("3.-PIZZA NAPOLITANA\n");
+    cin>>eleccion;
+	
+    switch(eleccion){
+         case 1: 
+	    printf("El tiempo de espera para este platillo es de 3 minutos desea ordenar este platillo? \nSi->1 \nNo->2\n");
+        cin>>o;
+        if (o==1){
+            hr=00, min=02, sec=60;
+            goto temporizador;
+        }else if (o==2){
+            system("cls");
+            goto m;
+        }
+        break;
+	         
+	    case 2: 
+	    printf("El tiempo de espera para este platillo es de 3 minutos desea ordenar este platillo? \nSi->1 \nNo->2\n");
+        cin>>o;
+        if (o==1){
+            hr=00, min=04, sec=60;
+            goto temporizador;
+        }else if (o==2){
+            system("cls");
+            goto m;
+        } 
+	    break;
+	         
+	    case 3: 
+	    printf("El tiempo de espera para este platillo es de 3 minutos desea ordenar este platillo? \nSi->1 \nNo->2\n");
+        cin>>o;
+        if (o==1){
+            hr=00, min=01, sec=60;
+            goto temporizador;
+        }else if (o==2){
+            system("cls");
+            goto m;
+        }
+	    break;
+
+        default:
+        cout<< "Opcion invalida favor de intentarlo nuevamente"<<endl;
+        goto m;
+        break;
+	    }
+
+    temporizador:
+    do{
         system("cls");      
-        cout<< "Mesa numero: "<<m<<"  "<< "su orden estara lista en: "<<endl;
+        cout<< "Mesa numero: "<<m<<" "<< "su orden estara lista en: "<<endl;
         cout<< hr << ":" << min << ":" << sec <<endl;
         sleep_for(seconds(1));
         sec--;
@@ -63,7 +112,27 @@ int main(){
             sec=59;
         }
 
-    }while (fin==0);
+        }while (fin==0);
 
+    system("cls");
+    cout<< "Mesa numero: "<<m<<"  "<< "su orden esta lista"<<endl;
+    cout<< "00:00:00"<<endl;
+
+    //prueba de mesa
+    cout<< "Desea ir con el siguiente cliente \nSi->1 \nNo->2?"<<endl;
+    cin>>p;
+
+    }while (x!=0);
+
+    if (p==1){
+            fin=0;
+            system("cls");
+            goto Inicio;
+        }else if(p==2){
+            x==1;
+            a:
+            cout<< "Gracias por su atencion"<<endl;
+        }
+    
 	return 0;
 }
